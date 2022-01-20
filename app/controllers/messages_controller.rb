@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
       redirect_to prototype_path(@message.prototype)
     else
       @prototype = @message.prototype
-      @message = @prototype.messages
+      @messages = @prototype.message
       render "prototypes/show"
     end
   end
